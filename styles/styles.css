@@ -303,6 +303,7 @@ footer {
     .btn-servicios, .btn-whatsapp {
         width: 80%;
         font-size: 18px;
+        margin: 10px auto;
     }
 }
 
