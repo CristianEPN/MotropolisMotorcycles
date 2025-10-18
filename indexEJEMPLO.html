@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Motropolis Motorcycles - Taller de motos</title>
+    <style>
+        :root{
+            --accent:#e63946;
+            --dark:#1f2937;
+            --muted:#6b7280;
+            --bg:#f8fafc;
+            --card:#ffffff;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:var(--bg);color:var(--dark);line-height:1.4}
+        .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+        /* Header / Nav */
+        header{background:#fff;border-bottom:1px solid #e6e6e6;position:sticky;top:0;z-index:50}
+        .nav-wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+        .brand{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--dark);text-decoration:none}
+        .brand .mark{width:36px;height:36px;background:var(--accent);border-radius:6px;display:inline-block}
+        nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+        nav a{color:var(--dark);text-decoration:none;padding:.4rem .6rem;border-radius:6px}
+        nav a:hover{background:#f1f5f9}
+        .cta{background:var(--accent);color:white;padding:.5rem .8rem;border-radius:6px;text-decoration:none}
+        /* Hero */
+        .hero{display:flex;align-items:center;gap:2rem;padding:4rem 0;background:linear-gradient(90deg, rgba(230,57,70,0.06), transparent)}
+        .hero .left{flex:1}
+        .hero h1{font-size:clamp(1.6rem,3vw,2.4rem);margin:0 0 .5rem}
+        .hero p{color:var(--muted);margin:0 0 1rem}
+        .hero .actions{display:flex;gap:.8rem}
+        .hero .mock{flex:1;min-height:160px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);border:1px dashed #e6e6e6}
+        /* Servicios */
+        .services{padding:2.5rem 0}
+        .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+        .card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 4px rgba(16,24,40,0.03);border:1px solid #f1f5f9}
+        .card h3{margin:.2rem 0 .5rem}
+        .card p{color:var(--muted);font-size:.95rem;margin:0}
+        /* Footer */
+        footer{background:#0f1724;color:#fff;padding:2rem 0;margin-top:2rem}
+        .footer-grid{display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-start}
+        .footer-col{flex:1;min-width:200px}
+        .footer .title{font-weight:700;margin-bottom:.5rem}
+        .small-menu a{display:block;color:#d1d5db;text-decoration:none;margin:.25rem 0}
+        .socials{display:flex;gap:.6rem;align-items:center}
+        .socials a{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .6rem;background:rgba(255,255,255,0.06);border-radius:8px;color:#fff;text-decoration:none}
+        .contact p{margin:.25rem 0;color:#d1d5db}
+        /* Responsive */
+        @media (max-width:900px){
+            .services-grid{grid-template-columns:repeat(2,1fr)}
+            .hero{flex-direction:column}
+            .hero .mock{width:100%}
+        }
+        @media (max-width:560px){
+            nav ul{display:none}
+            .nav-wrap{padding:0 .5rem}
+            .services-grid{grid-template-columns:1fr}
+            .footer-grid{flex-direction:column}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-wrap">
+            <a class="brand" href="#">
+                <span class="mark" aria-hidden="true"></span>
+                Motropolis Motorcycles
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#taller">Taller</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <a class="cta" href="#contacto">Pide tu cita</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero -->
+        <section class="hero" id="inicio" aria-label="Sección principal">
+            <div class="left">
+                <h1>Tu taller de confianza para todas las motos</h1>
+                <p>En Motropolis Motorcycles ofrecemos mantenimiento, reparación y personalización profesional para que tu moto rinda y luzca como nueva.</p>
+                <div class="actions">
+                    <a class="cta" href="#servicios">Ver servicios</a>
+                    <a href="#taller" style="padding:.5rem .8rem;border-radius:6px;background:#fff;border:1px solid #e6e6e6;color:var(--dark);text-decoration:none">Conoce el taller</a>
+                </div>
+            </div>
+            <div class="mock" aria-hidden="true">
+                Imagen / Mockup de moto
+            </div>
+        </section>
+
+        <!-- Servicios destacados -->
+        <section class="services" id="servicios" aria-label="Servicios destacados">
+            <h2 style="margin:0 0 1rem">Servicios destacados</h2>
+            <div class="services-grid">
+                <article class="card" aria-labelledby="s1">
+                    <h3 id="s1">Mantenimiento general</h3>
+                    <p>Servicio completo: aceite, filtros, ajustes de cadena y revisión de sistemas para garantizar seguridad y rendimiento.</p>
+                </article>
+
+                <article class="card" aria-labelledby="s2">
+                    <h3 id="s2">Reparación y mecánica</h3>
+                    <p>Diagnóstico avanzado y reparación de motor, transmisión y suspensión con repuestos de calidad.</p>
+                </article>
+
+                <article class="card" aria-labelledby="s3">
+                    <h3 id="s3">Personalización</h3>
+                    <p>Modificaciones estéticas y funcionales: escapes, pintura, accesorios y mejoras de rendimiento.</p>
+                </article>
+
+                <article class="card" aria-labelledby="s4">
+                    <h3 id="s4">Diagnóstico electrónico</h3>
+                    <p>Lectura y resolución de fallas electrónicas, reprogramación y puesta a punto con herramientas profesionales.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Placeholder secciones adicionales -->
+        <section id="taller" style="padding:1.5rem 0">
+            <h2>Taller y equipamiento</h2>
+            <p style="color:var(--muted)">Nuestro taller está equipado para atender desde mantenimiento rutinario hasta intervenciones complejas.</p>
+        </section>
+
+        <section id="precios" style="padding:1.5rem 0">
+            <h2>Precios y paquetes</h2>
+            <p style="color:var(--muted)">Consulta nuestros paquetes y promociones. Ofrecemos transparencia en costos y presupuestos sin sorpresas.</p>
+        </section>
+
+        <section id="contacto" style="padding:1.5rem 0">
+            <h2>Contacto</h2>
+            <p style="color:var(--muted)">Solicita una cita por teléfono, redes o formulario (agrega formulario aquí según necesites).</p>
+        </section>
+    </main>
+
+    <!-- Footer dividido en 3 partes -->
+    <footer>
+        <div class="container footer-grid">
+            <!-- Izquierda: Ubicación -->
+            <div class="footer-col">
+                <div class="title">Ubicación</div>
+                <p>Motropolis Motorcycles</p>
+                <p>Calle Principal 123, Ciudad, País</p>
+                <p style="color:#9ca3af;font-size:.95rem;margin-top:.5rem">Horario: Lun-Vie 9:00 - 18:00 · Sáb 9:00 - 14:00</p>
+            </div>
+
+            <!-- Medio: Pequeño menú -->
+            <div class="footer-col">
+                <div class="title">Enlaces rápidos</div>
+                <nav class="small-menu" aria-label="Enlaces del pie">
+                    <a href="#servicios">Servicios</a>
+                    <a href="#taller">Taller</a>
+                    <a href="#precios">Precios</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </div>
+
+            <!-- Derecha: Redes sociales y contactos -->
+            <div class="footer-col">
+                <div class="title">Síguenos & Contacto</div>
+                <div class="socials" style="margin-bottom:.6rem">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <!-- simple icon Facebook -->
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07C1.86 17.09 5.93 21.29 10.77 22v-7.09H8.22v-2.84h2.55V9.41c0-2.52 1.5-3.9 3.79-3.9 1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.25 0-1.64.78-1.64 1.57v1.89h2.79l-.45 2.84h-2.34V22C18.07 21.29 22 17.09 22 12.07z"/></svg>
+                        Facebook
+                    </a>
+
+                    <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <!-- simple TikTok-ish icon -->
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2v10.5A4.5 4.5 0 1 1 9.5 6V8a6 6 0 1 0 2.5 11.5V2h-0.0z"/></svg>
+                        TikTok
+                    </a>
+                </div>
+
+                <div class="contact">
+                    <p>Tel: <a href="tel:+1234567890" style="color:#d1d5db;text-decoration:none">+12 345 678 90</a></p>
+                    <p>Email: <a href="mailto:contacto@motropolis.com" style="color:#d1d5db;text-decoration:none">contacto@motropolis.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html></div>
