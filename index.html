@@ -15,7 +15,7 @@
             <img src="img/logo_Motropolis.jpg" alt="Motropolis Motorcycles Logo" class="logo">
         </section>
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
@@ -85,7 +85,7 @@
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
-        
+
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('show');
         });
