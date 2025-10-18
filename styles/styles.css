@@ -238,4 +238,81 @@ footer {
     }
 }
 
+/* --- RESPONSIVE HEADER --- */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
 
+/* Oculta menú en móviles inicialmente */
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #111;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex; /* Mostrar al abrir */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}
+
+/* --- HERO RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+        background-position: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 22px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-servicios, .btn-whatsapp {
+        width: 80%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicios section {
+        width: 90%;
+    }
+}
