@@ -458,3 +458,28 @@ form button:hover {
         font-weight: bold;
     }
 }
+/* Responsive sección nosotros */
+@media (max-width: 900px) {
+    .contenedor-nosotros{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imagen-nosotros{
+        width: auto;
+    }
+
+    .texto-nosotros{
+        padding-left:20px;
+        padding-right:20px;
+    }
+}
+
+/* Responsive formulario de contacto */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+}
