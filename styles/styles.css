@@ -8,6 +8,14 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 /* Estilos del encabezado y menu de navegación */
@@ -180,7 +188,11 @@ footer {
     font-size: 22px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    color: #fff;
+    color: #ff0000;
+}
+
+.redes_mobile{
+    display: none;
 }
 
 /* Texto de ubicación */
@@ -224,6 +236,9 @@ footer {
     color: #ff0000;
 }
 
+
+
+
 /* Responsividad */
 @media (max-width: 768px) {
     .container-footer {
@@ -247,7 +262,7 @@ footer {
 }
 
 /* Oculta menú en móviles inicialmente */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     nav ul {
         position: absolute;
         top: 80px;
@@ -274,7 +289,7 @@ footer {
     }
 
     .logo {
-        width: 120px;
+        width: 180px;
     }
 }
 
@@ -301,7 +316,7 @@ footer {
     }
 
     .btn-servicios, .btn-whatsapp {
-        width: 80%;
+        width: 180px;
         font-size: 18px;
         margin: 10px auto;
     }
@@ -315,5 +330,47 @@ footer {
 
     .servicios section {
         width: 90%;
+    }
+}
+
+/*Responsividad pie de página */
+@media (max-width: 770px) {
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0;
+        height: auto;
+    }
+
+    .menu-footer, .ubicacion {
+        max-height: 150px;
+    }
+
+    .redes-sociales img {
+        display: none;
+    }
+
+    .redes-sociales{
+        max-height: 90px;
+    }
+
+    .redes_mobile{
+        display: block;
+        margin-top: 20px;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #ff0000;
+    }
+
+    .title{
+        margin-top: 10px;
+    }
+
+    .copy{
+        margin-top: 15px;
+        font-weight: bold;
     }
 }
